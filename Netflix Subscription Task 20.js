@@ -54,19 +54,3 @@ function createNewStudents(username, email, password, membershippackagename){
     mike.subscriptionActiveTill();
 
 }
-
-async function readInput() {
-        let inputString = '';
-        var output=[];
-        process.stdin.on('data', inputStdin => {
-            inputString += inputStdin;
-            const inputArr = inputString.split(/(?:\r\n|\r|\n)/g)
-            const argumentsArr = inputArr[0].split(',');
-            createNewStudents(argumentsArr[0], argumentsArr[1], argumentsArr[2], argumentsArr[3] )
-            process.exit();
-            
-        })
-        
-
-}
-readInput();
